@@ -15,27 +15,23 @@ import java.util.*;
 //assume array has been sorted
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
-        int left=0;int right=nums.length-1;
-//        Arrays.sort(nums);
-        while(left<=right){
-            if(nums[left]+nums[right]>target){
-                right--;
+        //the array is not sorted, so hashmap is the most intuitive way
+        Map<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            int x=nums[i];
+            if(map.containsKey(target-x)){
+                return new int[]{map.get(target-x),i};//it was asking return index
             }
-            else if(nums[left]+nums[right]<target){
-                left++;
-            }
-            else {
-                return new int[] {left,right};
-            }
+            map.put(x,i);
         }
-        return new int[]{0,0};
+        throw new IllegalArgumentException("No solution");
     }
     public static void main(String[] args){
         TwoSum t1=new TwoSum();
         int[] numbers={2,3,4};
         int[] numbers2={2, 7, 11, 15};
         int target=6;
-        int[] result=t1.twoSum(numbers2,9);
+        int[] result=t1.twoSum(numbers2,22);
         for(int i:result){
             System.out.println(i);
         }
