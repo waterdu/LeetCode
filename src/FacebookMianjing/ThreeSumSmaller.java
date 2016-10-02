@@ -1,5 +1,7 @@
 package FacebookMianjing;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 <= i < j < k < n that
@@ -33,14 +35,36 @@ public class ThreeSumSmaller {
         }
         return count;
     }
+    public List<int[]> FollowUp(int[] nums, int target) {
+        //same as 3sum,I want to use two pointer, sort the array first
+        List<int[]> result=new ArrayList<>();
+        Arrays.sort(nums);
+        int count = 0;
+        for (int i = 0; i < nums.length - 2; i++) {//i is the num to be fixed
+            int left = i + 1, right = nums.length - 1;
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+                if (sum >= target) {//need to be smaller
+                    right--;
+                } else {//all number between are below target [1,2,3,4],target =6
+                    count += right - left;
+                    for(int j=right;j>left;j--){
+                        result.add(new int[]{i,left,j});
+                        System.out.print("["+i+","+left+","+j+"]");
+                    }
+                    left++;
+                }
+            }
+        }
+        return result;
+    }
     public static void main(String[] args){
         ThreeSumSmaller t1=new ThreeSumSmaller();
         int[] numbers={2,3,4,5};
         int[] numbers2={2, 7, 11, 15};
         int target=6;
         int result=t1.ThreeSumSmaller(numbers,22);
+        List<int[]> res1=t1.FollowUp(numbers,22);
         System.out.println(result);
     }
-
-
 }
