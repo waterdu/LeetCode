@@ -45,7 +45,7 @@ public class TopKFrequentElements {
         }
         for(int pos=array.length-1;pos>0;pos--){//get from large to small
             if(array[pos]!=null){
-                for(int i=0;i<array[pos].size()&&res.size()<k;i++){//first check over flow, then check get k already
+                for(int i=0;i<array[pos].size()&&res.size()<k;i++){//first check over flow, then check get k already yet
                     res.add(array[pos].get(i));
                 }
             }
