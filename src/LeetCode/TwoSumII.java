@@ -34,8 +34,13 @@ public class TwoSumII {
         int target=1;
         TwoSumII t=new TwoSumII();
         int[] result=t.TwoSumII(numbers,target);
-        for(int i:result){
-            System.out.println(i);
-        }
+//        for(int i:result){
+//            System.out.println(i);
+//        }
+        char a='A';
+        char b='B';
+        char c=(char)(a^b^a);
+        //System.out.println(a);
+        System.out.println(c);
     }
 }
