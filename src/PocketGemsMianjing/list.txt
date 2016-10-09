@@ -1,0 +1,21 @@
+1 findMissingNumber
+楼主说楼主说的是missing number 还是first missing positive啊
+还是first missing positive啊 missing number用数列求和来解比较tricky first missing positive是要bucket sort的
+
+2. 实现strstr
+
+3. 给一序列数， 输出出现最多的前K个。 --> 如果数列是sorted -->如果给的是一个stream， 没头没尾的
+
+4. 有m大小的内存空间，但是用N个数在硬盘里，且k < m << N。怎么找出现最多的k个数。
+
+5 candy crush
+
+6 Convert a tenary operation to a tree.
+ a?b?c:d:e
+ a
+ | \
+  b e
+  | \ c d
+
+  链接: https://instant.1point3acres.com/thread/125309
+  来源: 一亩三分地

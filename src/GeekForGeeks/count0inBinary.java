@@ -12,7 +12,6 @@ public class count0inBinary {
             if((n & num)==0){//if this position is 0,count +1
                 count++;}
             n<<=1;
-
         }
         return count;
     }

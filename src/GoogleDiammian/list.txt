@@ -1,0 +1,9 @@
+
+1 remove duplicate lines of a file(what if the file is very large which could
+not be held in the main memory)
+
+2开关灯问题
+
+3 Trapping Rain Water(leetcode)
+
+4 sometimes a program works, sometimes it does not. Possible reasons

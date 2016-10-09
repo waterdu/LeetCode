@@ -1,0 +1,9 @@
+1. clone directed graph(recursive, non-recursive)
+   longest common suffix of two linked list
+   data structure design
+2. how many (m, n) pairs such that m*m+n*n<N
+   线索化二叉树
+3. 判断一个点是否在一个凸多边形内, O(n), O(logn)
+4. group items(BFS)
+   MapReduce(filter a collection of documents, the words which occur more
+than 5000 times)
