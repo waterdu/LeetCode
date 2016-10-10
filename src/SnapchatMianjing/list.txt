@@ -1,0 +1,5 @@
+Warm Up: How are you doing. Your recent project. Why Snapchat.
+Coding Questions:
+1. prime number
+2. all prime numbers <= n.
+3. a power b

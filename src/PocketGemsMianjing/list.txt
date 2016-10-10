@@ -1,6 +1,10 @@
+面试官问有什么问题，我就问问公司每天做什么，你们用什么Engine
+OA: http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=165862&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D39%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26sortid%3D311
 1 findMissingNumber
 楼主说楼主说的是missing number 还是first missing positive啊
 还是first missing positive啊 missing number用数列求和来解比较tricky first missing positive是要bucket sort的
+
+2
 
 2. 实现strstr
 
@@ -19,3 +23,133 @@
 
   链接: https://instant.1point3acres.com/thread/125309
   来源: 一亩三分地
+
+7 Contains Duplicate III， 阿三面试官, linear time solution
+8 1. 一组数范围在［0， n] 每个数都存在， 有的数出现一次， 有的数出现两次，输出所有出现两次的数 O(n) time, O(1) space
+居然不是top K， 上来有点懵， 稳了一下问他说可不可以改变数组元素的位置， 说可以。 就尝试扫一遍， 没到array != i
+的时候就交换 array 和array[array] 知道相等。 最后所有array != i的数就是重复的数。因为每次交换都会使一个位置出现array ＝= i
+的情况， 最多n 次交换 time O(n) 2. 一个矩阵有0 和 1， 1的右边一定是1， 要找到整个矩阵最左边的1。 要求复杂度比O(mn) 好。
+一开始naive了， 说每行binary search。 他问能不能更好。 才发现 从右上角第一个1开始往左找， 遇到0 往下找下一个1，
+直到不能走了为止。 复杂度O(m + n)
+
+9一个矩阵有0 和 1， 1的右边一定是1， 要找到整个矩阵最左边的1。 要求复杂度比O(mn) 好。
+一开始naive了， 说每行binary search。 他问能不能更好。 才发现 从右上角第一个1开始往左找，
+遇到0 往下找下一个1， 直到不能走了为止。 复杂度O(m + n)
+
+10 lc28 strstr和lc366 find leaves of binary tree也没有follow up就问了一下时间复杂度。
+ 两题写完都有很小的bug，提示之后马上改过来了，看来还是功底不行啊。
+
+11假设现在有三种item: armor, diamond, ruby，每种item有各自的value，你作为一个游戏中的一个角色，
+你的背包里有n个slots里。现在就是要求，比如输入是10个armor，5个diamond，3个ruby，你怎么拿使得最后背包中的value和最大。
+但是有两个限制，背包里的1个slot只能装同种的东西，比如你有两个slots，一个slot只能拿armor，另一个就只能拿ruby。
+另一个限制是每一个item有一个max_stack_size，就是比如armor的max_stack_size = 5，说明你最多拿5个armor在一个slot中
+
+12 给一个2维矩阵， 1代表Land, 0是water 2 是start point, 3是exit 其实就是找shortestPath，
+除了上面的0，1，2，3之外，有小写字母 a、b、c etc 代表钥匙， A /B C etc代表相应的锁。 锁和钥匙出现没有先后顺序。
+=> 状态压缩的BFS，每一维除了位置(row, col)之外还要记录当前拿到了哪些钥匙，用二进制表示 比如说(row, col, 5)可以表示拿到了a, c这两把钥匙。
+
+13 input: int arr, int k output: boolean 给一个 int 矩阵，一个数 k。
+判断这个矩阵里的数是否能组成长度不低于 k 的连续数字串。要求时间复杂度 O(n)，n 是矩阵长度。
+ example: , 3 -> true ，因为存在 (1, 2, 3) , 3 -> false ，最长的连续数字串是 (2, 3)，重复数字不算。
+  我说用 bucket sort，小哥说不行，int 的范围太广了。然后我琢磨半天才明白怎么用 HashTable。在小哥的各种提醒下凑活写完了主体，
+  corner case 还没考虑，小哥说没时间了，你问我问题吧。
+  Lc Longest Consecutive Sequence 的变种
+
+14 sort color, color 是object型的，自带一个enum的属性 第一问正常的排三种颜色，就是地里面经的方法，two pointers 第二问sort 4 colors，
+先排第一种和最后一种，再排中间两种 第三问：sort n colors，，重点来了。。。本来想直接用线排1，n-1; 再排2，n－2这样做，
+问了我一下时间复杂度，然后问我有没有更好的方法，我愣了一下，小哥继续提示，有没有好的sort alogrithm，我说有，quick sort,
+然后问了我一下复杂度是多少，口误不小心把best case说成O(logn)了，应该是O(nlogn), 然后就让我描述下具体怎么实现，
+不用写代码，再选pivot value的时候有点磕巴，之前不知道选中间那个，小哥一直给我举例提示才会的，后来就说correct什么的，
+然后问了下问题，就byebye了。
+是的 object里面有个enum的field放了 RED，GREEN，BLUE，直接用object.Color直接取就好了～
+当是我不太明白怎么取 说不太熟悉enum，还是小哥告诉的，跟int没差哈～
+
+ 15 norder successor of BST, 有parent 和没有parent都问了，
+ 他给的node是有value的，不像之前有人说没有value的情况，所以可以用比较value的方法来做～问了一下time complexity
+
+Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph
+
+16 LC 227 Basic Calculator II。这个是2面
+
+17 有环图中找两点间的解法，connected时间占总时间的百分比，地里面经很多，就不细说了。我用的是desktop client, 比较好用
+
+18 implement “indexOf"
+
+19. given an array and k, return the values in the array with k highest occurrence frequency.
+ ex: [1, 1, 2, 2, 2, 3, 4], k=2 output: 1, 2
+
+20 题目是让实现一个BigInt, 先实现一个constructor,然后实现add方法，让写出来test case 自己run出来结果
+
+
+21 1. 转载：“别名叫做机器人在2D平面坐标走路（警告：会问的非常深入）. more info on 1point3acres.com
+大概题目就是给你一个K，如果坐标digit的sum不超过k，那么就是valid的点，负数一律按照绝对值处理”
+2，Input String array = {“ab, bc, bz”} Output “abcz”-google 1point3acres Input String array = {“fbz, jb, ebj”}
+Output “efbjz” 要满足三个条件： 1. Output unique character 2. output的string里，character相对顺序不变。
+Input不会有“bc ”，“cb”这种情况出现 3.满足以上两个条件，按照lexicographical order,
+输出最小的可能性. follow up： how to detect invalidate input? this means how to detect cycle in direct graph
+3. 转载：“有player, achievement, requirement, reward几个class需要设计，
+要求如下 代码要求简单，易读添加新的成就，不用修改代码添加新的属性，
+修改代码的量需要最小.” follow up: how to use those class?
+the Factory design pattern, How to design configuration file?
+4. Word Break, Word BreakII which are same as leetcode.
+the time complexity, use dp to implemnt the word break 2
+5. 转载：“有一个切好的披萨缺了一块，你和朋友轮流拿（每次只能拿边上的），
+求怎样拿才能保证拿到的area最大。纠结了半天只能强上DFS”
+ My problem is different from this one. He ask me How to get max sum of areas? Good luck for every one!
+
+
+static String parseLines(String[] lines) {
+         /*
+          * Use once parse the String
+          * The Complexities O(n)
+          * I have a question about Unit_test 2
+          * My first answer is 67%
+          * totalTime : 2700000
+          * ConnectTime : 1800000
+          * 66.66666666666666
+          * DecimalFormat df = new DecimalFormat("######0");
+          * System.out.println(df.format(ratio));
+          * return String.format("%s%s", df.format(ratio), "%");
+          */
+         long startTime = new Long(0);
+         long endTime = new Long(0);
+         long connectedTime = 0;
+         long lastTimePoint = 0;
+         for (int i = 0; i < lines.length; i++) {
+             String[] line = lines.split(" :: ");
+             long tmpTime = converToDate(line[0].substring(1, line[0].length() - 1)).getTime();
+             String status = line[1];
+
+             if (i == 0) startTime = tmpTime;
+             if (i == lines.length - 1) endTime = tmpTime;
+             if (status.equals("CONNECTED")) {
+                 lastTimePoint = tmpTime;
+             } else if (status.equals("DISCONNECTED") || status.equals("SHUTDOWN")) {. visit 1point3acres.com for more.
+                 if (lastTimePoint > 0) {
+                     connectedTime += tmpTime - lastTimePoint;
+                     lastTimePoint = -1; 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�.
+                 }
+             }.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+         }
+         if (endTime - startTime == 0) return "0%";
+         System.out.println(endTime - startTime);. 鍥磋鎴戜滑@1point 3 acres
+         System.out.println(connectedTime);
+         double ratio = (double) connectedTime/(endTime - startTime) * (new Double(100));.1point3acres缃�
+     . From 1point 3acres bbs
+
+         return String.format("%d%s", (int)ratio, "%");
+
+     } 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�.
+
+     static private Date converToDate(String datastring) {
+         DateFormat dFormat = new SimpleDateFormat("MM/dd/yyyy-hh:mm:ss");
+         Date date = new Date();
+         try {. 1point3acres.com/bbs
+             date = dFormat.parse(datastring);
+         } catch (ParseException e) {
+             e.printStackTrace();
+         } 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�.
+         return date;
+     }
+     鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�.
+     hen I see The player spent 13 minutes out of 15 connected, 13 / 15 = 0.8667, output should be "86%".

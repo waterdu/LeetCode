@@ -1,0 +1,264 @@
+Behavior：Why Facebook？
+题目：Subset & Subset II， time complexity
+
+Binary Tree Paths & Flatten Linked list
+(https://leetcode.com/problems/binary-tree-paths/)
+(https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
+第二题稍微改动就是把数据结构从Tree变成了一个linkedlist，然后他说每个node可能不止有下一个，还有可能有下一层。所以就相当于再加一个down pointer，然后每个node的down pointer要么是nullptr要么就不是。然后如果某个node的down pointer不是null，那就假设他的value是null。
+Follow-ups:
+1. 第一题问了一下time complexity。
+
+2  longest palindrome substring
+第二题是unique path, LC 原题, 继续演, 先用2D vector然后优化成1D.
+
+1 第一题：Binary Tree preorder iterator (原题）， 很快秒了，没啥好说的，算是个warmup吧
+2 第二题：Vertically print the binary tree. 楼主最近看leetcode发现这个题已经加上去了，但是当时leetcode还没有这个题。不过我看到过面经自己写过这个题，用的是recursion。3哥让我分析完算法复杂度后说不让用recursion。我突然想完了。。。不过可能太想去fb了吧，居然想出了用HashMap + level order的方法。中间3哥直接要求优化，比如只开一个Queue, 还有不能排序map里的的内容在打印（就是在遍历的时候记录左右边界值就可以了）。最后写出来了，我真是松了口气，3哥也很high。。。不过，最后那个print函数没写，一是很trivial了，二是没时间了。。。。其实这轮最后感觉非常爽，因为觉得自己做出了一个新题。。。。。现在回想可能面试官不这么想。。。
+ 4天后收到HR邮件说，过了
+3 Minimum window substring
+ 这轮是我最懊恼的。刚开始居然没反应过来是原题。。。花了15+时间再写暴力算法 O(n^2)，而且还不对。。。后来面试官说，你先别管你写的对不对了，你能优化你的时间复杂度吗？突然想到了minimum window substring…
+ 写了10分钟写完，解释了下，就剩5分钟了。。。。对方就直接让我问问题了。。。这轮面完感觉很差，因为是个原题，虽然是hard题而且做出来了，但是我觉如果是原题，即使是hard题
+4 几何算法问题。如果给你一堆的矩形， 求重合矩形重合最多的坐标位置。我上过一个算法课，大概思路就是做一个二维的meeting room II.
+5 第一题leetcode新题：https://leetcode.com/problems/wiggle-sort-ii/
+6 flip game，要不要sg函数我也不知道。。。。。。同学用的暴力法，后来聊了聊sg函数
+7一个数组里有多个最大值，等概率随机返回其中一个最大值的index，
+ 要求one pass。
+ 8 LC 的 permutations
+9 (1)Min Stack改成Max Stack (https://leetcode.com/problems/min-stack/)
+
+10 (2) Reverse words in a String II. Do it in place without using extra memory. (https://leetcode.com/problems/reverse-words-in-a-string-ii/)
+
+11 Onsite: Serialize and Deserialize Binary Tree (https://leetcode.com/problems/se … ialize-binary-tree/)
+
+12 longest substring with at most K distinct charcaters,
+要求输出string形式。用two pointers + hashset, 写完后让优化，
+在他提示之下最后时刻勉强写出来，但小哥没有表态，之后就是提问环节。。。
+面试结束发现这是一道LC上的google的hard题。
+
+13  subset2
+move zero4
+analysis of space and time complexity
+
+14
+9/16 面的facebook
+1. count and say
+2. 在string中用 + 或 - 返回组成target的个数
+例如 ： String = "12" target = 1
+可能的组合是 +1+2 , +1-2, -1+2,-1-2,+12,-12,其中 -1+2 = 1，所以返回1
+
+15
+isPalindrome,
+sparse vector multiplication
+sort color
+pow(n,m)
+
+16 Determine whether a given string can be divided into a sequence of words, which should be in a dictionary.
+The function boolean isDictWord(String s) is given.
+   Implement the function boolean partition String(String s)
+   看起来像word break
+17 1. LeetCode 3SUM.
+   2. LeetCode Add Binary.
+18 Letter combination of Phone Number
+19 Behavior：Why Facebook？
+   题目：Subset & Subset II
+20 Leetcode原题Insert Interval，稍微有点变化就是输入是无序的，要求计算总的interval时间，
+顺利做完bug free。follow up问如果要多次调用该函数的话怎么改进。
+
+21 ThreeSum，先是unique numbers， 然后followup存在duplicate的情况。
+顺利答完，复杂度问的很细，最后一个很奇怪的follow up， 怎么优化输出？
+小哥解释后才明白：譬如说一个用户调用这个函数，想查找一组数是否是存在答案中。
+恍然大悟说哦用set<vector<int>>，然后详细问了unordered_set和set的区别和实现方法。最后两分钟问问问题拜拜。
+
+22 valid palindrome
+
+23 move zeroes
+
+24 Two sum
+
+25 reverse print linkedlist。。我先写了一个先反转然后打印的方法。问了时间和空间复杂度。。然后然写一个递归的方法。我在这里出了点typo错误。。被他看到了= =。
+。。指出来才改掉。。然后这道题完了。感觉他没有话说了。。。。顿了一下。
+
+26 add binary
+
+27 加了第二道题。。是判断是否是bst，，我写了一个iterative 用stack的方法。
+
+28 第一道题#randomly return the index of maximal elements in the array.
+我用的地里一个兄台的one pass方法。。小哥没看懂。。
+我就把概率证明了一次。然后就great idea了哈哈哈。。
+第二道题minimum window containsing a string变种。。
+输入是一个字符串和一个集合。。
+集合就是我们要的之后最小窗口里面必须有的字符。我当时知道这种考法。
+。但是这道题本身就难= =。。。背了解法。。就先说了想法。
+。小哥说great idea！然后我就照着原来的解法边写边改。。。中间出了bug。。
+他指了出来。跑了个testcase我才发现= =。。。。。然后继续写。
+。写完了他还帮我瘦了一下身。。说原来的code work 但是这样更好嘛。。
+我写了大概二十分钟。。。写完了叹了口气。。他也跟着叹了口气。。。
+不过他一直在说你的idea很棒啊。用hashmap。。最后问了时间复杂度空间复杂度还有hashmap的put方法的时间复杂度
+   然后问问题就结束了
+我在面经里面看到几乎都是random 那道题和window这道题搭配。reverse linkedlist 和mutex搭配。每次必问复杂度。对bug free要求很高。
+中东小哥的口头禅就是I think there might be a bug here
+
+29 Find first k common elements in n sorted arrays.
+
+30 Task Schedule, 地里有面经。大致意思是每种task都有冷却时间，比如task1执行后，要经过interval时间后才能再次执行，求总共所需时间。
+Sample 1 tasks: 1, 1, 2, 1.recovery interval: 2
+output: 7(order is 1 _ _ 1 2 _ 1)
+    Sample 2
+ tasks: 1, 2, 3, 1, 2, 3.recovery interval: 3
+output: 7(order is 1 2 3 _ 1 2 3)
+
+31 valid palindrome, leetcode 原题，但是不能修改String, 所以就不能用s.
+   toLowerCase(), 当时就急了，因为不知道Character的 toLowerCase的method是什么，
+   她说写sudo-code就可以了。很快做出来了，然后写test cases
+   2, Binary Search的变型，Git Bisect, 从某一个版本开始，引入了一个bug, 然后让
+   我找出引入这个bug的第一个文件。binary search之
+
+32 Iterator for in-order traversal of binary tree. 开始以为是iterative traverse in-order binary tree…还暗喜了一会
+
+33 trie的搜索, 和leetcode 有些不同。
+   class Node {
+   Node getChildForLetter(letter)
+   Node[] getAllChildren();
+   bool isTerminal();
+   }
+
+   搜索返回所有符合wildcard的词
+
+   比如
+   add(“car”)
+   add(“caw”)
+   add(“cauw”)
+
+   search(“c*w”) should return “caw” and “cauw”.
+
+   * could be at any place in the input string.
+
+34 题目是decode ways。搞定之后有2个follow up: 1) 能不能降低space complexity 2) 如果不是所有的字母都可以，
+而是只能decode成元音字母（AEIOU）怎么办。Follow up都不用写code，只要给出思路就可以。后来就是愉快的聊天时间啦。
+
+35 有一个int read4k(char* buf) 每次可以读4k的字节，请实现int read(char* buf, int k) 读出任意长度的字节。当时没有考虑到read被调用多次的情况
+
+题二：Product of Array Except Self。 2分钟思考，我用了两个array， left和right先左边的积，右面的积。然后问我还可以优化么，
+我说其实还可以用一个array， 然后问我还可再优化么，思索再三，说不知道了。
+
+36
+Given a sequence of distinct integers, your program must remove as few
+elements as possible in order for the elements which are not removed
+to appear in ascending order.  If there is more than one way to do
+this, your program must print one solution, then print the number
+of all solutions.
+Example.
+
+Given   1 2 3 8 10 5 6 7 12 9 11 4 0
+Remove        8 10       12      4 0
+Remain  1 2 3      5 6 7    9 11       (ascending)
+
+To form an ascending sequence, you must remove at least 5 elements.
+There is only one way to do it.
+我没做出来，不过看别人讨论是用longest increasing subsequence dp算法来做。还得研究研究。
+
+37 LC的图拷贝。
+
+38 regular expression matching
+
+39 给一数字array 含有0~9，根据电话dial pad，给出所有他们对应的所以字母组合。
+   比方说 2 -> abc, 3 -> def ,
+   input '23' -> 'ad', 'bd', 'cd'...
+
+40 有三种括号，大中小 {}, [], ()
+   然后input是string，输出最后最短的不invalid的顺序' }! @2 M8 M! Y; s  W6 ~
+   比如‘{[(])]}’ 输出 要想全test case
+
+41 第一题：merge K sorted list or array    我先分析了用heap方法的复杂度。获得他的认可之后，开始代码。
+ 因为我的代码改变了原来的list的结构，于是有了follow up。
+   follow up：如果不让你修改原来的数据，你怎么修改代码？
+
+42
+1. 给你一个array, 里面的值表示当前位置的bar的高度。这些bar组成一个容器，求这个容器最多可以装多少水。! h& U5 e/ j+ T4 [$ R4 A
+2. 两个由0, 1组成的字符串, 求把他们加起来之后的字符串，注意进位
+
+43 一面valid panlindomore, same tree
+   二面word search
+44 Reverse linked list，给出了解法后，然后问还有什么方法，如何优化之类的。。。算是比较顺利
+
+45  vertical tree， 就是将tree竖着输出，follow up: 楼主用了map去存储，所以算法复杂度是n log n, follow up 是将算法复杂度降低到n,
+
+46 n houses, k colors. neighboring houses cannot be painted with the same color.
+   NOTICE: neighboring relationship is given by adjacent list which means a house may have multiple neighbors.
+   基本上是图的着色问题。讨论的时候那个帖子楼主说思路是这样的：
+   “看做一个graph。然后分组。初始所有house都为group 0
+   用bfs遍历这个图。然后根据相邻house颜色不一样改变组号。。。
+   最后颜色根据cost排序，然后最大group的house涂cost最小的颜色，以此类推”
+
+47task schedule，老题了，对时间复杂度和空间复杂度问的非常详细，一个简单的O（N）是糊弄不过去的，
+然后就是follow up，要求在不减少时间复杂度的情况下，降低空间复杂度，
+楼主采用如果当前时间大于map里的task的应该执行的时间时，
+把对应task 从map remove掉，然后上代码，又被问了空间时间复杂度，非常详细，
+用number of unique task和cooldown time表示了出来，但是这样做，时间复杂度上升了，
+面试官要求不影响时间复杂度，苦思冥想了一会，如果map中遇到task 的 execute time 大于currTIME 就break掉，
+面试官说方向是对的，但是map不能保证输出顺序，然后说得用treemap，最后面试官没让上代码 因为已经就剩5分钟了，聊了一会面试官的项目，
+
+48  convert Tree to DoubleLinkedList 并且保持inorder 遍历的顺序
+时间复杂度nlogn 然后小哥让优化 一开始小哥让优化到logn  吓的我心脏都快跳出来了，然后小哥一笑 说口误 不好意思，是n~  undefined ， 然后说inorder 遍历一遍放在list里 然后再把他们连上，  做完这个已经只有12分钟了，  小哥说再来一个好吗 undefined 只能勉强的接受了， 然后就是把刚才的double linked list 变回 tree，
+ 我说不大可能吧~ 因为root 已经不确定是谁了，小哥说没关系 生成的树能保证层数最低就好~  我说可以， 然后写完代码后，
+
+49 1.给一个数组，求biggest drop
+例如给 L = [1,2,3,7,13,6,3,8,1]
+biggest drop = 13 - 1 = 12
+2.serilize a binary tree, 要求可以deserilize, leetcode 297-
+
+50 color graph--2 sets
+把一个图的点染成2种颜色，输出为boolean，输入为graph，判断输入的graph可否被2种颜色染色。
+
+.1 follow up,  最小移动次数moveZero
+一组数组，要求你找3个数的和，数可以重复取，使得和为0， 找出所有的可能，有点combination sum + 3sum 结合的感觉；
+
+51 题1，strstr，稍微用了几种不同的解法5 e2 z2 U1 ?3 \8 y. ?( Y6 ]. H! ~
+   题2，字符串相加，刚开始直接用str转成number，然后相加转回去，然后他很无语，就说，既然你喜欢这么样，
+   那就写个stoi试试？然后我马上说，那我就正常写吧，不玩trick的了。哈哈
+
+52 1. 给一个matrix，每一个row都是从小到大，给一个数，判断是否在其中。似乎有O(logn)的做法。
+        2. 给list of string. 把anagram的string放在一起.
+        3. 给a list of segment，求出与其他segment相交最多的segment
+            比如[1,3] [2,4] [7,8] [4,5] 返回[2,4] 因为它与[1,3]和[4,5]相交
+
+
+前端问题：
+1.讲讲最近的前端项目（讲了讲实习项目的前端部分）
+2.给html, css, js打个分（html 8，css理论8实践7，js 8.5）
+ 3.问一些基础问题
+  1. call和apply的区别：都是改变调用函数的上下文，call直接接收arguments，apply需要把arguments打包成数组调用
+  2. 什么是闭包：即使外部函数已经返回，内部函数仍然能够访问外围函数作用域里的变量
+  3. event delegation是什么，有什么优点：利用事件冒泡把event handling放到高层节点去做，减少handler数量也好管理
+  4. array和object的区别是什么：他问这个问题我有点懵，这两个东西相似度比区别少多了。。。于是扯了一大堆，最后发现她想问的是哪个是有序的哪个是无序的。。。 5. dom是什么数据结构：想想上个题，果断回答tree。。。
+
+14 首先一上来问很基础的Java相关的问题：
+   1.什么是Class？
+   2.public，private，protected三个关键词的特性
+   3.给了四个关键词，问那一个不能打断for loop？  选项好像有 break，continue，xxx 和 default。 那很明显就是default了。6 c6 o) M& c7 q' c8 l( U1 r* T
+   4.问O(n),O(n^2),O(lgN) 那个最小。。。感觉这简直就是在侮辱人的智商。 正因为此题，UP主才觉得这个还真的是HR电面，估计HR根本不懂技术，但是准备好了问题和答案去check+ f' Y4 J- i: O$ L: w& K
+   5.问什么结构可以在O(1)的时间内get到key的value。 那么答案很自然的就是hashmap。
+
+   接着可能因为妹子的简历上有Web的project，HR就稳了几个很基本的Web问题：
+   1.什么语言不能直接pass文件到网上。 妹子给的答案是PHP
+   2. bad request 对应的是一下那种情况： 1.404 2.400 3.500 答案应该是400，因为404是not found， 500不知道是啥， 有时候上网会遇见400 bad request) y9 M1 R* Z. `6 |/ Q3 x) m" [- g! `( b
+   3.这题记得不太清楚了，好像问的是与get，post，put有关的问题，答案貌似是HTML" w+ [, J5 p$ {
+   4.问与网页长度和宽度有关的参数是什么。 答案应该是meta
+   后面还有两个问题，貌似不难，所以妹子记得也不是很清楚了。
+
+   下面就是算法题了，本身并不难。但是面试官要求在5分钟之内写出来。题目是给你两个string： str1 和 str2， string的形式是YYYY/MM/DD就是两个string都是表示时间的string。 要你返回那个离现在时间较近的string。 经过和面试官交流后得知，str1和str2表示的时间都应该是过去的时间。 那么这题就不是很难了啊，UP主写一个解答，思路应该正确，但是不保证bug free：* f6 {: C* R. F* G  q
+   public class Solution {
+           public String closestTime(String str1, String str2){8 `! T6 q: q$ ~4 ?
+                    if(str1 == null && str2 == null) return null;
+                    if(str1 == null || str2 == null) return str1 == null ? str2 : str1;
+                    if(str1.length() != str2.length()) return null;/ o( C' j& I& {2 F" V" T7 d0 s% W! l
+   ' z7 g, p1 j' _2 e1 t& i! v( l
+                    for ( int i = 0; i < str1.length(); i++ ){
+                            if ( str1.charAt(i).compareTo(str2.charAt(i)) > 0 ) return str1;
+                            else if(str1.charAt(i).compareTo(str2.charAt(i)) < 0) return str2;) P$ A) P9 z: A
+                    }
+
+                    return str1;
+           }$ c) O1 }4 t' d
+   }
+
+   本质上就是将str1和str2上的每一个char逐一比较，如果在index i的位置上遇到两个不一样的char，返回那个具有较大char的str。

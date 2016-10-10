@@ -1,6 +1,4 @@
-package FacebookMianjing;
-
-import java.util.*;
+package FacebookDianmian;
 
 /**
  * You're given an array of integers(eg [3,4,7,1,2,9,8]) Find the index of values that satisfy A+B = C + D, where
