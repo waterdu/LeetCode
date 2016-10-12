@@ -8,12 +8,12 @@ package FacebookDianmian;
  "A man, a plan, a canal: Panama" is a palindrome.
  "race a car" is not a palindrome.
  */
-public class isPalindrome {//use tow point
+public class isPalindrome {//use tow point, O(n)
     public boolean isPalindrome(String s) {
         int left=0;
         int right=s.length()-1;//bug point, you did s.length
         while(left<right){
-            while(left<right&&!Character.isLetterOrDigit(s.charAt(left))){
+            while(left<right&&!Character.isLetterOrDigit(s.charAt(left))){//Character first. isLetterOrDigit second
                 left++;
             }
             while(left<right&&!Character.isLetterOrDigit(s.charAt(right))){

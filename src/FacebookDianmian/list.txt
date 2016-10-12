@@ -1,6 +1,10 @@
 Behavior：Why Facebook？
 题目：Subset & Subset II， time complexity
 
+1 出了道题：自然string comparator。不知道的搜下natrual string comparision。就是string 比较的时候考虑里面数字的大小，比如 abc9 < abc123 abc > ab9  因为char比digit重要。进入onsite了，求bless。求加分！
+要的就是这样：
+
+
 Binary Tree Paths & Flatten Linked list
 (https://leetcode.com/problems/binary-tree-paths/)
 (https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
