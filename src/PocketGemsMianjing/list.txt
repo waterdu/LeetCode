@@ -4,7 +4,9 @@ OA: http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=165862&extra=pa
 楼主说楼主说的是missing number 还是first missing positive啊
 还是first missing positive啊 missing number用数列求和来解比较tricky first missing positive是要bucket sort的
 
-2
+2Given constants k1 and k2 and an array return whether the array contains 2
+indices i and j such that j-i <= k1 and absolute value of abs(array-array) <= k2
+example: {2,100,200,5} k1 = 3 k2 = 3
 
 2. 实现strstr
 
@@ -71,7 +73,8 @@ Dijkstra's algorithm is an algorithm for finding the shortest paths between node
 
 16 LC 227 Basic Calculator II。这个是2面
 
-17 有环图中找两点间的解法，connected时间占总时间的百分比，地里面经很多，就不细说了。我用的是desktop client, 比较好用
+17 Given constants k1 and k2 and an array return whether the array contains 2 indices i and j
+such that j-i <= k1 and absolute value of abs(array-array) <= k2 example: {2,100,200,5} k1 = 3 k2 = 3
 
 18 implement “indexOf"
 

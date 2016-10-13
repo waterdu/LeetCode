@@ -16,7 +16,7 @@ import java.util.Map;
 public class LogParser {
     public static void main(String[] args)
             throws FileNotFoundException, IOException {
-        String filename = "./data/test1.txt";
+        String filename = "test3.txt";
         if (args.length > 0) {
         	filename = args[0];
         }
@@ -51,6 +51,9 @@ public class LogParser {
 	}
     
     static String parseLines(String[] lines) {
+        for(String line:lines){
+            System.out.println(line);
+        }
     	Map<String, Integer> status = new HashMap<>();
     	status.put("START", 0);
         status.put("CONNECTED", 1);
@@ -60,26 +63,41 @@ public class LogParser {
         List<String> events = new ArrayList<String>();
         for (int i = 0; i < lines.length; i++) {
 	        String[] line = lines[i].split(" :: ");
-	        if(!status.containsKey(line[1])) {
+	        if(!status.containsKey(line[1])) {//contain the four status
 	        	continue;
 	        }
 	        times.add(convertDate(line[0].substring(1, line[0].length()-1)));
 	        events.add(line[1]);
         }
-        long totalTime = times.get(times.size()-1).getTime() - times.get(0).getTime();
+        //long totalTime = times.get(times.size()-1).getTime() -
+        long start=times.get(0).getTime();
+        long end =times.get(times.size()-1).getTime();
+        long totalTime=end-start;
         long connectedTime = 0;
         long lastTimePoint = 0;
+        boolean conncted=false;
         for (int i=1; i<times.size(); i++) {
-        	String currentEvent = events.get(i);
-        	long currentTime = times.get(i).getTime();
-        	if (status.get(currentEvent) > 0) {
-        		lastTimePoint = currentTime;
-        	} else if (lastTimePoint > 0) {
-	            connectedTime += currentTime - lastTimePoint;
-	            lastTimePoint = -1;
-        	}
+//        	String currentEvent = events.get(i);
+//        	long currentTime = times.get(i).getTime();
+//        	if (status.get(currentEvent) > 0) {
+//        		lastTimePoint = currentTime;
+//        	} else if (lastTimePoint > 0) {
+//	            connectedTime += currentTime - lastTimePoint;
+//	            lastTimePoint = -1;
+//        	}
+            String currentstatus=events.get(i);
+            long currentTime = times.get(i).getTime();
+            if(status.get(currentstatus)==1&& !conncted){
+                lastTimePoint=currentTime;
+                conncted=true;
+            }else if(status.get(currentstatus)==-1 && conncted){
+                connectedTime=connectedTime+currentTime-lastTimePoint;
+                conncted=false;
+            }
+
         }
         double ratio = (double) connectedTime / totalTime * 100;
+        System.out.println(ratio);
         return String.format("%d%s", (int) ratio, "%");
     }
 }

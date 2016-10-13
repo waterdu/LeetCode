@@ -1,8 +1,5 @@
 package PocketGemsMianjing;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -11,11 +8,14 @@ import java.util.*;
 public class PathFinder {
         public static void main(String[] args)
                 throws FileNotFoundException, IOException {
+//
+//            File file = new File(".");
+//            for(String fileNames : file.list()) System.out.println(fileNames);
             String filename = "input_1.txt";
             if (args.length > 0) {
                 filename = args[0];
             }
-
+            System.out.println(filename);
             List<String> answer = parseFile(filename);
             System.out.println(answer);
         }
@@ -37,6 +37,9 @@ public class PathFinder {
         }
 
         static List<String> parseLines(List<String> lines) {
+            for(int i = 0; i < lines.size(); i++) {
+                System.out.println(lines.get(i));
+            }
             Set<String> visited = new HashSet<String>();
             Map<String, List<String>> graph = new HashMap<String, List<String>>();
             List<String> res = new ArrayList<String>();
@@ -53,7 +56,8 @@ public class PathFinder {
             return res;
         }
 
-        private static void traversal(String start, String end, String path, Set<String> visited, List<String> res, Map<String, List<String>> graph) {
+        private static void traversal(String start, String end, String path, Set<String> visited,
+                                      List<String> res, Map<String, List<String>> graph) {
             String curPath = path;
             curPath += start;
             visited.add(start);
