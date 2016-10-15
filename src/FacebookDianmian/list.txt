@@ -3,12 +3,13 @@ Behavior：Why Facebook？
 
 1 出了道题：自然string comparator。不知道的搜下natrual string comparision。就是string 比较的时候考虑里面数字的大小，比如 abc9 < abc123 abc > ab9  因为char比digit重要。进入onsite了，求bless。求加分！
 要的就是这样：
-
+太难，跳过
 
 Binary Tree Paths & Flatten Linked list
 (https://leetcode.com/problems/binary-tree-paths/)
 (https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
-第二题稍微改动就是把数据结构从Tree变成了一个linkedlist，然后他说每个node可能不止有下一个，还有可能有下一层。所以就相当于再加一个down pointer，然后每个node的down pointer要么是nullptr要么就不是。然后如果某个node的down pointer不是null，那就假设他的value是null。
+第二题稍微改动就是把数据结构从Tree变成了一个linkedlist，然后他说每个node可能不止有下一个，还有可能有下一层。所以就相当于再加一个down pointer，
+然后每个node的down pointer要么是nullptr要么就不是。然后如果某个node的down pointer不是null，那就假设他的value是null。
 Follow-ups:
 1. 第一题问了一下time complexity。
 
@@ -115,6 +116,7 @@ output: 7(order is 1 2 3 _ 1 2 3)
    她说写sudo-code就可以了。很快做出来了，然后写test cases
    2, Binary Search的变型，Git Bisect, 从某一个版本开始，引入了一个bug, 然后让
    我找出引入这个bug的第一个文件。binary search之
+
 
 32 Iterator for in-order traversal of binary tree. 开始以为是iterative traverse in-order binary tree…还暗喜了一会
 
