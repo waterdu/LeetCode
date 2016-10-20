@@ -5,6 +5,10 @@ Behavior：Why Facebook？
 要的就是这样：
 太难，跳过
 
+2 第一题 combination
+第二题 house robber
+follow up输出抢劫的house
+
 Binary Tree Paths & Flatten Linked list
 (https://leetcode.com/problems/binary-tree-paths/)
 (https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
@@ -179,8 +183,11 @@ There is only one way to do it.
    follow up：如果不让你修改原来的数据，你怎么修改代码？
 
 42
-1. 给你一个array, 里面的值表示当前位置的bar的高度。这些bar组成一个容器，求这个容器最多可以装多少水。! h& U5 e/ j+ T4 [$ R4 A
+1. 给你一个array, 里面的值表示当前位置的bar的高度。这些bar组成一个容器，求这个容器最多可以装多少水。
+LeetCode:Container With Most Water
+
 2. 两个由0, 1组成的字符串, 求把他们加起来之后的字符串，注意进位
+LeetCode:add Binary
 
 43 一面valid panlindomore, same tree
    二面word search
