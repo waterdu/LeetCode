@@ -25,10 +25,6 @@ public class count0inBinary {
         }
         return count;
     }
-
-
-
-
     public static void main(String[] args){
         count0inBinary t1=new count0inBinary();
         System.out.println(t1.countZero(8));

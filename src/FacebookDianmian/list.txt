@@ -7,7 +7,20 @@ Behavior：Why Facebook？
 
 2 第一题 combination
 第二题 house robber
+LeetCode house robber
 follow up输出抢劫的house
+
+3 warm up 如何check一个括号string是不是balance.
+  然后删除最少的括号使其balance
+  (() -> ()
+  (()() -> ()()
+  (())) -> (())
+  )( -> ""
+Leetcode 301. Remove Invalid Parentheses
+
+2 climbing stairs， rotate matrix
+ Populating Next Right Pointers in Each Node II, regex matching, decoding ways, two sums
+
 
 Binary Tree Paths & Flatten Linked list
 (https://leetcode.com/problems/binary-tree-paths/)
@@ -27,6 +40,7 @@ Follow-ups:
  这轮是我最懊恼的。刚开始居然没反应过来是原题。。。花了15+时间再写暴力算法 O(n^2)，而且还不对。。。后来面试官说，你先别管你写的对不对了，你能优化你的时间复杂度吗？突然想到了minimum window substring…
  写了10分钟写完，解释了下，就剩5分钟了。。。。对方就直接让我问问题了。。。这轮面完感觉很差，因为是个原题，虽然是hard题而且做出来了，但是我觉如果是原题，即使是hard题
 4 几何算法问题。如果给你一堆的矩形， 求重合矩形重合最多的坐标位置。我上过一个算法课，大概思路就是做一个二维的meeting room II.
+
 5 第一题leetcode新题：https://leetcode.com/problems/wiggle-sort-ii/
 6 flip game，要不要sg函数我也不知道。。。。。。同学用的暴力法，后来聊了聊sg函数
 7一个数组里有多个最大值，等概率随机返回其中一个最大值的index，
@@ -60,7 +74,7 @@ sparse vector multiplication
 sort color
 pow(n,m)
 
-16 Determine whether a given string can be divided into a sequence of words, which should be in a dictionary.
+16 Determine whether a given string can b73.182.196.40e divided into a sequence of words, which should be in a dictionary.
 The function boolean isDictWord(String s) is given.
    Implement the function boolean partition String(String s)
    看起来像word break
@@ -86,7 +100,7 @@ The function boolean isDictWord(String s) is given.
 25 reverse print linkedlist。。我先写了一个先反转然后打印的方法。问了时间和空间复杂度。。然后然写一个递归的方法。我在这里出了点typo错误。。被他看到了= =。
 。。指出来才改掉。。然后这道题完了。感觉他没有话说了。。。。顿了一下。
 
-26 add binary
+             26 add binary
 
 27 加了第二道题。。是判断是否是bst，，我写了一个iterative 用stack的方法。
 
@@ -209,12 +223,16 @@ LeetCode:add Binary
 用number of unique task和cooldown time表示了出来，但是这样做，时间复杂度上升了，
 面试官要求不影响时间复杂度，苦思冥想了一会，如果map中遇到task 的 execute time 大于currTIME 就break掉，
 面试官说方向是对的，但是map不能保证输出顺序，然后说得用treemap，最后面试官没让上代码 因为已经就剩5分钟了，聊了一会面试官的项目，
+第一题就是原题Remove Invalid Parentheses
+第二题是task scheduling
+
 
 48  convert Tree to DoubleLinkedList 并且保持inorder 遍历的顺序
 时间复杂度nlogn 然后小哥让优化 一开始小哥让优化到logn  吓的我心脏都快跳出来了，然后小哥一笑 说口误 不好意思，是n~  undefined ， 然后说inorder 遍历一遍放在list里 然后再把他们连上，  做完这个已经只有12分钟了，  小哥说再来一个好吗 undefined 只能勉强的接受了， 然后就是把刚才的double linked list 变回 tree，
  我说不大可能吧~ 因为root 已经不确定是谁了，小哥说没关系 生成的树能保证层数最低就好~  我说可以， 然后写完代码后，
 
-49 1.给一个数组，求biggest drop
+49
+1.给一个数组，求biggest drop
 例如给 L = [1,2,3,7,13,6,3,8,1]
 biggest drop = 13 - 1 = 12
 2.serilize a binary tree, 要求可以deserilize, leetcode 297-
@@ -258,7 +276,10 @@ biggest drop = 13 - 1 = 12
    4.问与网页长度和宽度有关的参数是什么。 答案应该是meta
    后面还有两个问题，貌似不难，所以妹子记得也不是很清楚了。
 
-   下面就是算法题了，本身并不难。但是面试官要求在5分钟之内写出来。题目是给你两个string： str1 和 str2， string的形式是YYYY/MM/DD就是两个string都是表示时间的string。 要你返回那个离现在时间较近的string。 经过和面试官交流后得知，str1和str2表示的时间都应该是过去的时间。 那么这题就不是很难了啊，UP主写一个解答，思路应该正确，但是不保证bug free：* f6 {: C* R. F* G  q
+   下面就是算法题了，本身并不难。但是面试官要求在5分钟之内写出来。题目是给你两个string： str1 和 str2，
+   string的形式是YYYY/MM/DD就是两个string都是表示时间的string。 要你返回那个离现在时间较近的string。
+   经过和面试官交流后得知，str1和str2表示的时间都应该是过去的时间。
+    那么这题就不是很难了啊，UP主写一个解答，思路应该正确，但是不保证bug free：
    public class Solution {
            public String closestTime(String str1, String str2){8 `! T6 q: q$ ~4 ?
                     if(str1 == null && str2 == null) return null;

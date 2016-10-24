@@ -13,6 +13,7 @@ public class isPalindrome {//use tow point, O(n)
         int left=0;
         int right=s.length()-1;//bug point, you did s.length
         while(left<right){
+            //prefix first, if" " or other"-",":"
             while(left<right&&!Character.isLetterOrDigit(s.charAt(left))){//Character first. isLetterOrDigit second
                 left++;
             }

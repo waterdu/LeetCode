@@ -1,0 +1,56 @@
+
+1. Delete Node Greater than X
+不知为何我在准备面经的时候写的版本好像并不work...我就借鉴了地友（地里的认识不认识的朋友（））的思路。
+新建一个链表！把小于该node的都新建一个node。
+
+2 abbcccdddd => Output: 1a2b3c4d
+CompressingString
+
+3 merge two sorted array (same size)
+
+4 题目是zigzag Array input: output: 返回的数组中先是最大，然后最小，然后次大，然后次小
+input:{4, 3, 7, 8, 6, 2, 1} -> output: {8, 1, 7, 2, 6, 3, 4}
+先排序，收尾依次输出
+
+5 给一个数组比如： 5 （数字个数） 2 1 5 8 7 求所有差的绝对值最小的pair，pair按ascending order输出，数字用空格隔开： 1 2 7 8
+
+5 input {3, 5, 4, 2, 7 ,8, 9}, { 8, 5, 2, 2， 6} output {8, 5, 2}
+输入俩unsorted array 输出一个降序的match的array， match不可重复利用
+兩個ｕｎｓｏｒｔｅｄ　ａｒｒａｙｓ找同樣的ｅｌｅｍｅｎｔ
+
+
+2. Rearrange word.
+参见LC 31 Next Permutation. 把 int array 变成 char array就行。
+3. Arrange Coins
+参见Wikipedia 三角形数。.
+-----------------------------
+剩下的题库大概是：
+4. Missing words
+用two pointer即可。一个指向较长的String分离出的word， 一个指向较短的String分离出的word。一个while循环就行。.
+
+5. Build Subsequence
+backtracking 解法。注意处理找到的duplicate 情况，所以我在存结果的时候用了HashSet。
+
+6. braces
+括号匹配。参见LC 20 Valid Parentheses. (也不知道是不是形成了思维定式...遇到括号就先想到Stack...)
+
+7. count duplicate
+HashMap存出现的数和次数。再遍历一遍找map.values() 大于1的，记录个数就行。
+太简单，不需要写
+
+8 string compress 就是 aaaaabbbccccde-> a5b3c4de
+
+
+------------------------------
+以上，不知道godaddy会不会有后续。但是目前看到的它家的OA就这么多，希望帮到别人拉~-
+
+OA1 closest number pair
+输入和输出都是string
+closest number
+
+2就一道题，题目很简单，给一个数组，里面是乱序的0和1，要求把所有0放在前面，
+所有1放在后面。 但是在实现的时候没一次全部写对，有一个test case不过，
+感觉有点虚。改正了以后，问怎么设计test case。问了不同方法的时间复杂度。
+之后问看array和linked list的区别。然后就问我还有没有什么问题要问他的。
+
+3 接下來談到database，我跟他說我沒修過相關的課，他就要我用猜想的single layer and muti-leyer database的優缺點，我說了些資料存取performance，他就開始跟我介紹好處跟壞處，就差不多30分鐘了 不過他問我，可不可以多聊一下 就問了些algorithm 1.給一個file system，要怎麼把全部directory走過，其實就是tree的traversal, 接著問怎麼找特定一個file，我說BFS，他問怎麼實作 2.接下來問給一個string 找出裡面所有的palindrome數目, EX: abcba 就是2(abcba, bcb) 接下來聊了下實習生的工作，西雅圖天氣，想在西雅圖還是在亞利桑那(Godaddy headquater)實習 從原本半小時面試坐後面了一小時
